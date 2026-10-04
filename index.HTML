@@ -24,6 +24,7 @@
                 <span class="font-bold text-lg tracking-tight">T.A.S. <span class="text-amber-500">Foundation</span></span>
             </a>
             
+            <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
                 <a href="#mission" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">Mission</a>
                 <a href="#portfolio" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">Portfolio</a>
@@ -32,14 +33,33 @@
                 <a href="#dispatches" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">Dispatches</a>
                 <a href="#contact" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">Connect</a>
                 
-                <!-- Theme Toggle Button -->
+                <!-- Theme Toggle Button (Desktop) -->
                 <button id="theme-toggle" class="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition" title="Toggle Light/Dark Mode">
-                    <!-- Sun Icon (shown in dark mode) -->
                     <svg id="theme-icon-light" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                    <!-- Moon Icon (shown in light mode) -->
                     <svg id="theme-icon-dark" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
                 </button>
             </nav>
+
+            <!-- Mobile Controls (Theme Toggle & Menu Button) -->
+            <div class="flex items-center gap-2 md:hidden">
+                <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">
+                    <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <svg class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+                </button>
+                <button id="menu-btn" class="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-6 py-4 space-y-3">
+            <a href="#mission" class="block text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white font-medium">Mission</a>
+            <a href="#portfolio" class="block text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white font-medium">Portfolio</a>
+            <a href="#gallery" class="block text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white font-medium">Gallery</a>
+            <a href="#team" class="block text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white font-medium">Founders</a>
+            <a href="#dispatches" class="block text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white font-medium">Dispatches</a>
+            <a href="#contact" class="block text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white font-medium">Connect</a>
         </div>
     </header>
 
@@ -378,91 +398,99 @@
         </div>
     </section>
 
-    <!-- FOUNDERS / CORE TEAM SECTION (For the 10 founding members) -->
-    <section id="team" class="py-20 bg-zinc-50 dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="mb-12 text-center">
-                <span class="text-xs text-amber-500 font-mono uppercase tracking-widest">Leadership</span>
-                <h2 class="text-3xl font-bold mt-1 mb-2">The Core 10 Founders</h2>
-                <p class="text-zinc-600 dark:text-zinc-400 text-sm max-w-xl mx-auto">The pioneering individuals who came together to start The Agbewornu Support Foundation.</p>
+    <!-- Founders / Team Section -->
+    <section id="team" class="py-16 px-4 md:px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Founders & Leadership</h2>
+            <p class="text-zinc-600 dark:text-zinc-400 mt-2 text-sm md:text-base">The team driving our vision forward.</p>
+        </div>
+
+        <!-- Responsive Grid for 10 Founders -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+            
+            <!-- Founder 1 -->
+            <div class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 rounded-2xl p-4 text-center flex flex-col items-center transition hover:shadow-md">
+                <img src="image/founder1.jpg" alt="Founder Name" class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full mb-3 shadow-sm border border-zinc-200 dark:border-zinc-700">
+                <h3 class="font-semibold text-sm md:text-base">Name Here</h3>
+                <p class="text-xs text-amber-500 font-medium mb-1">Role / Title</p>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2">Short bio or description.</p>
             </div>
 
-            <!-- Grid for the 10 Founders (Rectangular Card Style) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                
-                <!-- Founder 1 -->
-                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
-                    <img src="image/1.jpeg" alt="Ernest" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
-                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Ernest</h3>
-                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Founder / CEO</p>
-                </div>
-
-                <!-- Founder 2 -->
-                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
-                    <img src="image/2.jpeg" alt="Emilia Lawer" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
-                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Emilia Lawer</h3>
-                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Organizer</p>
-                </div>
-
-                <!-- Founder 3 -->
-                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
-                    <img src="image/3.jpeg" alt="Abigail" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
-                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Abigail</h3>
-                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Diplomat</p>
-                </div>
-
-                <!-- Founder 4 -->
-                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
-                    <img src="image/4.jpeg" alt="Kofigah" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
-                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Kofigah</h3>
-                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Organizer</p>
-                </div>
-
-                <!-- Founder 5 -->
-                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
-                    <img src="image/2.jpeg" alt="Konado" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
-                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Konado</h3>
-                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">the icecream girl</p>
-                </div>
-
-                <!-- Founder 6 -->
-                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
-                    <img src="image/3.jpeg" alt="maudyyy" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
-                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">maudyyy</h3>
-                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Content creator</p>
-                </div>
-
-                <!-- Founder 7 -->
-                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
-                    <img src="image/4.jpeg" alt="Britany" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
-                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Britany</h3>
-                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Mamacita</p>
-                </div>
-
-                <!-- Founder 8 -->
-                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
-                    <img src="image/3.jpeg" alt="Florence" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
-                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Florence</h3>
-                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Minister</p>
-                </div>
-
-                <!-- Founder 9 -->
-                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
-                    <img src="image/2.jpeg" alt="Trophy" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
-                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Trophy</h3>
-                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Unavailable</p>
-                </div>
-
-                <!-- Founder 10 -->
-                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
-                    <img src="image/1.jpeg" alt="Tino" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
-                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Tino</h3>
-                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">business man</p>
-                </div>
-
+            <!-- Founder 2 -->
+            <div class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 rounded-2xl p-4 text-center flex flex-col items-center transition hover:shadow-md">
+                <img src="image/founder2.jpg" alt="Founder Name" class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full mb-3 shadow-sm border border-zinc-200 dark:border-zinc-700">
+                <h3 class="font-semibold text-sm md:text-base">Name Here</h3>
+                <p class="text-xs text-amber-500 font-medium mb-1">Role / Title</p>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2">Short bio or description.</p>
             </div>
+
+            <!-- Founder 3 -->
+            <div class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 rounded-2xl p-4 text-center flex flex-col items-center transition hover:shadow-md">
+                <img src="image/founder3.jpg" alt="Founder Name" class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full mb-3 shadow-sm border border-zinc-200 dark:border-zinc-700">
+                <h3 class="font-semibold text-sm md:text-base">Name Here</h3>
+                <p class="text-xs text-amber-500 font-medium mb-1">Role / Title</p>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2">Short bio or description.</p>
+            </div>
+
+            <!-- Founder 4 -->
+            <div class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 rounded-2xl p-4 text-center flex flex-col items-center transition hover:shadow-md">
+                <img src="image/founder4.jpg" alt="Founder Name" class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full mb-3 shadow-sm border border-zinc-200 dark:border-zinc-700">
+                <h3 class="font-semibold text-sm md:text-base">Name Here</h3>
+                <p class="text-xs text-amber-500 font-medium mb-1">Role / Title</p>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2">Short bio or description.</p>
+            </div>
+
+            <!-- Founder 5 -->
+            <div class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 rounded-2xl p-4 text-center flex flex-col items-center transition hover:shadow-md">
+                <img src="image/founder5.jpg" alt="Founder Name" class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full mb-3 shadow-sm border border-zinc-200 dark:border-zinc-700">
+                <h3 class="font-semibold text-sm md:text-base">Name Here</h3>
+                <p class="text-xs text-amber-500 font-medium mb-1">Role / Title</p>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2">Short bio or description.</p>
+            </div>
+
+            <!-- Founder 6 -->
+            <div class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 rounded-2xl p-4 text-center flex flex-col items-center transition hover:shadow-md">
+                <img src="image/founder6.jpg" alt="Founder Name" class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full mb-3 shadow-sm border border-zinc-200 dark:border-zinc-700">
+                <h3 class="font-semibold text-sm md:text-base">Name Here</h3>
+                <p class="text-xs text-amber-500 font-medium mb-1">Role / Title</p>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2">Short bio or description.</p>
+            </div>
+
+            <!-- Founder 7 -->
+            <div class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 rounded-2xl p-4 text-center flex flex-col items-center transition hover:shadow-md">
+                <img src="image/founder7.jpg" alt="Founder Name" class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full mb-3 shadow-sm border border-zinc-200 dark:border-zinc-700">
+                <h3 class="font-semibold text-sm md:text-base">Name Here</h3>
+                <p class="text-xs text-amber-500 font-medium mb-1">Role / Title</p>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2">Short bio or description.</p>
+            </div>
+
+            <!-- Founder 8 -->
+            <div class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 rounded-2xl p-4 text-center flex flex-col items-center transition hover:shadow-md">
+                <img src="image/founder8.jpg" alt="Founder Name" class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full mb-3 shadow-sm border border-zinc-200 dark:border-zinc-700">
+                <h3 class="font-semibold text-sm md:text-base">Name Here</h3>
+                <p class="text-xs text-amber-500 font-medium mb-1">Role / Title</p>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2">Short bio or description.</p>
+            </div>
+
+            <!-- Founder 9 -->
+            <div class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 rounded-2xl p-4 text-center flex flex-col items-center transition hover:shadow-md">
+                <img src="image/founder9.jpg" alt="Founder Name" class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full mb-3 shadow-sm border border-zinc-200 dark:border-zinc-700">
+                <h3 class="font-semibold text-sm md:text-base">Name Here</h3>
+                <p class="text-xs text-amber-500 font-medium mb-1">Role / Title</p>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2">Short bio or description.</p>
+            </div>
+
+            <!-- Founder 10 -->
+            <div class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 rounded-2xl p-4 text-center flex flex-col items-center transition hover:shadow-md">
+                <img src="image/founder10.jpg" alt="Founder Name" class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full mb-3 shadow-sm border border-zinc-200 dark:border-zinc-700">
+                <h3 class="font-semibold text-sm md:text-base">Name Here</h3>
+                <p class="text-xs text-amber-500 font-medium mb-1">Role / Title</p>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2">Short bio or description.</p>
+            </div>
+
         </div>
     </section>
+         
 
     
     <!-- UPDATES & STORIES SECTION -->
@@ -619,7 +647,32 @@
                 htmlElement.classList.add('dark');
                 localStorage.setItem('theme', 'dark');
             }
+
+            
         });
+
+
+        // 3. Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sync mobile theme toggle button
+        const mobileThemeToggle = document.getElementById('theme-toggle-mobile');
+        if (mobileThemeToggle) {
+            mobileThemeToggle.addEventListener('click', () => {
+                if (htmlElement.classList.contains('dark')) {
+                    htmlElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    htmlElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        }
     </script>
 
 </body>
