@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Agbewornu Support (T.A.S.) Foundation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configure Tailwind to support class-based dark mode
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 font-sans antialiased transition-colors duration-300 selection:bg-amber-500 selection:text-zinc-900">
+
+    <!-- Navbar -->
+    <header class="border-b border-zinc-200 dark:border-zinc-800 sticky top-0 bg-white/90 dark:bg-zinc-900/90 backdrop-blur z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+            <!-- Logo Section -->
+            <a href="#" class="flex items-center gap-3">
+                <img src="image/1.jpeg" alt="T.A.S. Foundation Logo" class="h-12 w-auto object-contain">
+                <span class="font-bold text-lg tracking-tight">T.A.S. <span class="text-amber-500">Foundation</span></span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#mission" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">Mission</a>
+                <a href="#portfolio" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">Portfolio</a>
+                <a href="#gallery" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">Gallery</a>
+                <a href="#team" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">Founders</a>
+                <a href="#dispatches" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">Dispatches</a>
+                <a href="#contact" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">Connect</a>
+                
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition" title="Toggle Light/Dark Mode">
+                    <!-- Sun Icon (shown in dark mode) -->
+                    <svg id="theme-icon-light" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <!-- Moon Icon (shown in light mode) -->
+                    <svg id="theme-icon-dark" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Activist Hero Section with Slideshow Background -->
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden border-b border-zinc-200 dark:border-zinc-800">
+        <!-- Slideshow Background Container -->
+        <div id="slideshow" class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100" style="background-image: url('image/1.jpeg');"></div>
+            <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('image/2.jpeg');"></div>
+            <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('image3.jpeg');"></div>
+        </div>
+
+        <!-- Overlay: Adaptive to light/dark mode -->
+        <div class="absolute inset-0 bg-white/20 dark:bg-zinc-950/60 z-10 transition-colors duration-300"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-20 max-w-5xl mx-auto px-6 py-24 text-center">
+            <div class="inline-block bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-semibold px-3 py-1 rounded-full mb-6 border border-amber-500/20">
+                Grassroots Action in Ghana
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-6 leading-tight">
+                Built by the community, <br><span class="text-amber-500">for the community.</span>
+            </h1>
+            <p class="text-lg text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+                We don't do corporate charity. We show up on the ground, bridge information gaps, support students, and drive real localized impact where it matters most.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#dispatches" class="bg-amber-500 text-zinc-950 px-6 py-3 rounded-lg font-bold hover:bg-amber-400 transition">See Latest Updates</a>
+                <a href="#portfolio" class="border border-zinc-300 dark:border-zinc-700 bg-white/50 dark:bg-zinc-900/50 backdrop-blur px-6 py-3 rounded-lg font-medium hover:border-zinc-400 dark:hover:border-zinc-500 transition">View Our Work</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="relative bg-zinc-950 py-24 text-slate-100 overflow-hidden">
+  
+  <!-- Slideshow Image with a Side-to-Side Gradient Fade -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <!-- 1. Your Real Photo -->
+      <div class="absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-1000 transform scale-105" style="background-image: url('image/gallery1.jpg');"></div>
+      
+      <!-- 2. Gradient Overlay (Dark on one side, fading transparent to the other) -->
+      <div class="absolute inset-0 bg-gradient-to-r from-zinc-950/95 via-zinc-950/60 to-transparent"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+    
+    <!-- Top Nav Branding / Header Indicator -->
+    <div class="flex items-center justify-between mb-16 pb-6 border-b border-zinc-800/80">
+      <div class="flex items-center gap-3">
+        <div class="h-2 w-2 rounded-full bg-yellow-400 animate-pulse"></div>
+        <span class="text-xs font-semibold uppercase tracking-widest text-yellow-400">About The Foundation</span>
+      </div>
+      <p class="text-xs text-zinc-400 hidden sm:block">
+        Empowering the next generation through direct, transparent grassroots action.
+      </p>
+    </div>
+
+    <!-- Main Grid: Left Story & Right Cards -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Left Column: Heading, Narrative & Highlight Quote -->
+      <div class="lg:col-span-6 space-y-8">
+        <div>
+          <h2 class="text-4xl font-extrabold tracking-tight sm:text-5xl text-white leading-tight">
+            Rooted in community, driven by <span class="bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-200 bg-clip-text text-transparent">purpose.</span>
+          </h2>
+        </div>
+
+        <div class="space-y-4 text-zinc-300 text-base leading-relaxed font-light">
+          <p>
+            The Agbewornu Support (T.A.S.) Foundation was built by a core group of individuals dedicated to bridging gaps in our local communities. We believe that true development happens from the ground up—through direct engagement, resource sharing, and equipping the younger generation with the awareness and tools they need to thrive.
+          </p>
+          <p class="text-zinc-400">
+            Whether we are running educational outreach sessions for Junior High School students or mobilizing support resources, our focus is always on creating genuine, lasting impact without the red tape.
+          </p>
+        </div>
+
+        <!-- Asymmetric Highlight Quote Box with Yellow Accent -->
+        <div class="relative p-6 rounded-2xl bg-zinc-900/90 backdrop-blur-md border-l-4 border-yellow-400 border border-zinc-800 shadow-xl">
+          <p class="text-sm italic text-zinc-200 leading-relaxed">
+            "Our focus is always on creating genuine, lasting impact without the red tape—showing up physically on the ground rather than just talking about change."
+          </p>
+        </div>
+
+        <!-- Bottom Stat Callouts -->
+        <div class="grid grid-cols-2 gap-6 pt-4 border-t border-zinc-800/80">
+          <div class="flex items-start gap-3">
+            <div class="h-8 w-8 rounded-lg bg-yellow-400/10 flex items-center justify-center text-yellow-400 border border-yellow-400/20 shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white">100% Grassroots</h4>
+              <p class="text-xs text-zinc-400 mt-0.5">Directly connected to the communities we serve.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-3">
+            <div class="h-8 w-8 rounded-lg bg-yellow-400/10 flex items-center justify-center text-yellow-400 border border-yellow-400/20 shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white">Youth & Education</h4>
+              <p class="text-xs text-zinc-400 mt-0.5">Focused on mentorship and general tech awareness.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Graphical Core Principles Cards Grid -->
+      <div class="lg:col-span-6 flex flex-col gap-5">
+        
+        <div class="flex items-center justify-between">
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-zinc-400">Our Core Principles</h3>
+          <span class="text-xs text-yellow-400 font-mono">01 — 03</span>
+        </div>
+
+        <!-- Card 1: Transparency -->
+        <div class="group relative rounded-2xl bg-zinc-900/80 p-6 backdrop-blur-xl border border-zinc-800 hover:border-yellow-400/40 transition-all duration-300 shadow-xl">
+          <div class="absolute top-6 right-6 font-mono text-xs font-semibold text-yellow-400 bg-yellow-400/10 px-2.5 py-1 rounded-md border border-yellow-400/20">
+            01
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="h-12 w-12 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-yellow-400 shadow-inner group-hover:scale-105 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-white group-hover:text-yellow-300 transition-colors">Transparency</h4>
+              <p class="text-xs text-yellow-400/80 font-medium mt-0.5">Core Pillar</p>
+            </div>
+          </div>
+          <p class="text-sm text-zinc-300 leading-relaxed font-light">
+            Openness in all our programs, activities, and team leadership. We keep every process visible and straightforward.
+          </p>
+        </div>
+
+        <!-- Card 2: Action Over Words -->
+        <div class="group relative rounded-2xl bg-zinc-900/80 p-6 backdrop-blur-xl border border-zinc-800 hover:border-yellow-400/40 transition-all duration-300 shadow-xl">
+          <div class="absolute top-6 right-6 font-mono text-xs font-semibold text-yellow-400 bg-yellow-400/10 px-2.5 py-1 rounded-md border border-yellow-400/20">
+            02
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="h-12 w-12 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-yellow-400 shadow-inner group-hover:scale-105 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-white group-hover:text-yellow-300 transition-colors">Action Over Words</h4>
+              <p class="text-xs text-yellow-400/80 font-medium mt-0.5">Execution Focused</p>
+            </div>
+          </div>
+          <p class="text-sm text-zinc-300 leading-relaxed font-light">
+            Showing up physically on the ground rather than just talking about change. Real impact comes from consistent fieldwork.
+          </p>
+        </div>
+
+        <!-- Card 3: Community First -->
+        <div class="group relative rounded-2xl bg-zinc-900/80 p-6 backdrop-blur-xl border border-zinc-800 hover:border-yellow-400/40 transition-all duration-300 shadow-xl">
+          <div class="absolute top-6 right-6 font-mono text-xs font-semibold text-yellow-400 bg-yellow-400/10 px-2.5 py-1 rounded-md border border-yellow-400/20">
+            03
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="h-12 w-12 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-yellow-400 shadow-inner group-hover:scale-105 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-white group-hover:text-yellow-300 transition-colors">Community First</h4>
+              <p class="text-xs text-yellow-400/80 font-medium mt-0.5">People Driven</p>
+            </div>
+          </div>
+          <p class="text-sm text-zinc-300 leading-relaxed font-light">
+            Listening closely to local needs and shaping all our community initiatives around actual feedback from the ground.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="relative bg-zinc-950 py-24 text-slate-100 overflow-hidden border-t border-zinc-900">
+  
+  <!-- Subtle Background Glow -->
+  <div class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-yellow-500/5 blur-[120px] pointer-events-none"></div>
+
+  <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="mb-16">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="h-2 w-2 rounded-full bg-yellow-400 animate-pulse"></div>
+        <span class="text-xs font-semibold uppercase tracking-widest text-yellow-400">Our Track Record</span>
+      </div>
+      <h2 class="text-4xl font-extrabold tracking-tight sm:text-5xl text-white">
+        Impact <span class="bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-200 bg-clip-text text-transparent">Portfolio</span>
+      </h2>
+      <p class="mt-3 text-base text-zinc-400 max-w-xl">
+        Transparent look at our initiatives and boots-on-the-ground programs.
+      </p>
+    </div>
+
+    <!-- Portfolio Cards Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Card 1: JHS Technology Awareness Outreach -->
+      <div class="group relative rounded-3xl bg-zinc-900/80 p-8 backdrop-blur-xl border border-zinc-800 hover:border-yellow-400/40 transition-all duration-500 shadow-2xl flex flex-col justify-between overflow-hidden">
+        
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="font-mono text-xs font-semibold text-yellow-400 bg-yellow-400/10 px-3 py-1 rounded-full border border-yellow-400/20">
+              PROGRAM // 01
+            </span>
+            <span class="text-xs text-zinc-500 font-mono">Active Initiative</span>
+          </div>
+          
+          <h3 class="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors mb-3">
+            JHS Technology Awareness Outreach
+          </h3>
+          <p class="text-sm text-zinc-300 leading-relaxed font-light mb-8">
+            Direct engagement sessions with Junior High School students and community leaders, focusing on general tech awareness and future readiness.
+          </p>
+        </div>
+
+        <!-- Graphic Image Container -->
+        <div class="relative h-64 w-full rounded-2xl overflow-hidden border border-zinc-800/80 group-hover:border-zinc-700 transition-colors">
+          <!-- Program Photo Image -->
+          <div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-700" style="background-image: url('image/jhs_outreach.jpg');"></div>
+          
+          <!-- Dark Gradient Vignette Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent"></div>
+          
+          <!-- Floating Label over Image -->
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+            <span class="text-xs font-medium text-zinc-200 bg-zinc-900/80 px-3 py-1.5 rounded-lg backdrop-blur-md border border-zinc-700/50">
+              Educational Outreach Session
+            </span>
+            <span class="h-8 w-8 rounded-lg bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-yellow-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Card 2: Community Support & Donations -->
+      <div class="group relative rounded-3xl bg-zinc-900/80 p-8 backdrop-blur-xl border border-zinc-800 hover:border-yellow-400/40 transition-all duration-500 shadow-2xl flex flex-col justify-between overflow-hidden">
+        
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="font-mono text-xs font-semibold text-yellow-400 bg-yellow-400/10 px-3 py-1 rounded-full border border-yellow-400/20">
+              PROGRAM // 02
+            </span>
+            <span class="text-xs text-zinc-500 font-mono">Community Driven</span>
+          </div>
+          
+          <h3 class="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors mb-3">
+            Community Support & Donations
+          </h3>
+          <p class="text-sm text-zinc-300 leading-relaxed font-light mb-8">
+            Resource mobilization and donation drives designed to uplift local households and foster direct community resilience.
+          </p>
+        </div>
+
+        <!-- Graphic Image Container -->
+        <div class="relative h-64 w-full rounded-2xl overflow-hidden border border-zinc-800/80 group-hover:border-zinc-700 transition-colors">
+          <!-- Program Photo Image -->
+          <div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-700" style="background-image: url('image/donations.jpg');"></div>
+          
+          <!-- Dark Gradient Vignette Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent"></div>
+          
+          <!-- Floating Label over Image -->
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+            <span class="text-xs font-medium text-zinc-200 bg-zinc-900/80 px-3 py-1.5 rounded-lg backdrop-blur-md border border-zinc-700/50">
+              Foundation Support Drive
+            </span>
+            <span class="h-8 w-8 rounded-lg bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-yellow-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>    
+
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="py-20 border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs text-amber-500 font-mono uppercase tracking-widest">Visual Archive</span>
+                    <h2 class="text-3xl font-bold mt-1">Foundation Gallery</h2>
+                </div>
+                <p class="text-zinc-600 dark:text-zinc-400 text-sm mt-2 sm:mt-0">Snapshots from our community outreach, student sessions, and ground drives.</p>
+            </div>
+
+            <!-- Responsive Gallery Grid (~30 Images Setup) -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                
+                <!-- Repeat this block for your gallery photos (e.g., gallery1.jpg to gallery30.jpg) -->
+                <div class="group relative bg-zinc-100 dark:bg-zinc-900 rounded-xl overflow-hidden aspect-square border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                    <img src="image/3.jpeg" alt="Outreach Moment" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+
+                <div class="group relative bg-zinc-100 dark:bg-zinc-900 rounded-xl overflow-hidden aspect-square border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                    <img src="image/2.jpeg" alt="Outreach Moment" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+
+                <div class="group relative bg-zinc-100 dark:bg-zinc-900 rounded-xl overflow-hidden aspect-square border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                    <img src="image/3.jpeg" alt="Outreach Moment" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+
+                <div class="group relative bg-zinc-100 dark:bg-zinc-900 rounded-xl overflow-hidden aspect-square border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                    <img src="image/4.jpeg" alt="Outreach Moment" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+
+                <div class="group relative bg-zinc-100 dark:bg-zinc-900 rounded-xl overflow-hidden aspect-square border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                    <img src="image/3.jpeg" alt="Outreach Moment" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+
+                <div class="group relative bg-zinc-100 dark:bg-zinc-900 rounded-xl overflow-hidden aspect-square border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                    <img src="image/2.jpeg" alt="Outreach Moment" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+
+                <!-- Tip: You can duplicate these cards up to your desired count, updating the image names (gallery7.jpg, gallery8.jpg, etc.) -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOUNDERS / CORE TEAM SECTION (For the 10 founding members) -->
+    <section id="team" class="py-20 bg-zinc-50 dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-12 text-center">
+                <span class="text-xs text-amber-500 font-mono uppercase tracking-widest">Leadership</span>
+                <h2 class="text-3xl font-bold mt-1 mb-2">The Core 10 Founders</h2>
+                <p class="text-zinc-600 dark:text-zinc-400 text-sm max-w-xl mx-auto">The pioneering individuals who came together to start The Agbewornu Support Foundation.</p>
+            </div>
+
+            <!-- Grid for the 10 Founders (Rectangular Card Style) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                
+                <!-- Founder 1 -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
+                    <img src="image/1.jpeg" alt="Ernest" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
+                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Ernest</h3>
+                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Founder / CEO</p>
+                </div>
+
+                <!-- Founder 2 -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
+                    <img src="image/2.jpeg" alt="Emilia Lawer" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
+                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Emilia Lawer</h3>
+                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Organizer</p>
+                </div>
+
+                <!-- Founder 3 -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
+                    <img src="image/3.jpeg" alt="Abigail" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
+                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Abigail</h3>
+                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Diplomat</p>
+                </div>
+
+                <!-- Founder 4 -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
+                    <img src="image/4.jpeg" alt="Kofigah" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
+                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Kofigah</h3>
+                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Organizer</p>
+                </div>
+
+                <!-- Founder 5 -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
+                    <img src="image/2.jpeg" alt="Konado" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
+                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Konado</h3>
+                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">the icecream girl</p>
+                </div>
+
+                <!-- Founder 6 -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
+                    <img src="image/3.jpeg" alt="maudyyy" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
+                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">maudyyy</h3>
+                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Content creator</p>
+                </div>
+
+                <!-- Founder 7 -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
+                    <img src="image/4.jpeg" alt="Britany" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
+                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Britany</h3>
+                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Mamacita</p>
+                </div>
+
+                <!-- Founder 8 -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
+                    <img src="image/3.jpeg" alt="Florence" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
+                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Florence</h3>
+                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Minister</p>
+                </div>
+
+                <!-- Founder 9 -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
+                    <img src="image/2.jpeg" alt="Trophy" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
+                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Trophy</h3>
+                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">Unavailable</p>
+                </div>
+
+                <!-- Founder 10 -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-center shadow-sm hover:border-amber-500/50 transition">
+                    <img src="image/1.jpeg" alt="Tino" class="w-full h-32 mx-auto mb-4 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800">
+                    <h3 class="font-bold text-base text-zinc-900 dark:text-white">Tino</h3>
+                    <p class="text-xs text-amber-500 font-semibold tracking-wide uppercase mt-1">business man</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- UPDATES & STORIES SECTION -->
+    <section id="dispatches" class="py-20 border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs text-amber-500 font-mono uppercase tracking-widest">Stay Informed</span>
+                    <h2 class="text-3xl font-bold mt-1">Latest News & Updates</h2>
+                </div>
+                <p class="text-zinc-600 dark:text-zinc-400 text-sm mt-2 sm:mt-0">Stories and notes straight from our ongoing programs.</p>
+            </div>
+
+            <!-- Responsive Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Update Card 1 with Dropdown / Expandable Text -->
+                <article class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 shadow-sm flex flex-col justify-between transition">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-zinc-500 mb-3">
+                            <span class="font-mono bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded">September 2026</span>
+                            <span class="text-amber-500 font-semibold">Outreach</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 leading-snug">Reflections on our latest JHS student engagement</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-4">
+                            Visiting the students and sharing insights on general technology awareness showed us just how hungry the younger generation is for guidance...
+                        </p>
+
+                        <!-- HTML Details/Dropdown for the Full Story -->
+                        <details class="group mt-2">
+                            <summary class="list-none cursor-pointer inline-flex items-center gap-2 text-amber-500 text-sm font-semibold hover:underline select-none">
+                                <span class="group-open:hidden">Read full story &rarr;</span>
+                                <span class="hidden group-open:inline">Show less &uarr;</span>
+                            </summary>
+                            
+                            <!-- The Dropdown Content -->
+                            <div class="mt-4 pt-4 border-t border-zinc-100 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed space-y-3 animate-fadeIn">
+                                <p>
+                                    Nothing like complex coding or setting up heavy computer labs—we focused purely on real conversations about what is possible in the modern tech space. 
+                                </p>
+                                <p>
+                                    Seeing the students actively ask questions and engage with community leaders proved that opening minds early is the most powerful tool we have. We look forward to doing more of these ground-level sessions moving forward.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+
+                <!-- Update Card 2 (Placeholder for future stories) -->
+                <article class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 shadow-sm flex flex-col justify-between transition">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-zinc-500 mb-3">
+                            <span class="font-mono bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded">Upcoming</span>
+                            <span class="text-amber-500 font-semibold">Community</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 leading-snug">Next steps for our community support drives</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-4">
+                            We are currently mapping out our next phase of resource mobilization and outreach programs across local neighborhoods...
+                        </p>
+
+                        <!-- HTML Details/Dropdown for Story 2 -->
+                        <details class="group mt-2">
+                            <summary class="list-none cursor-pointer inline-flex items-center gap-2 text-amber-500 text-sm font-semibold hover:underline select-none">
+                                <span class="group-open:hidden">Read full story &rarr;</span>
+                                <span class="hidden group-open:inline">Show less &uarr;</span>
+                            </summary>
+                            
+                            <div class="mt-4 pt-4 border-t border-zinc-100 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed space-y-3">
+                                <p>
+                                    Our upcoming initiative focuses on broadening our support reach. We are organizing logistics, vetting prospective helpers, and preparing materials for distribution.
+                                </p>
+                                <p>
+                                    Stay tuned to our social handles or reach out via our contact footer if you want to take part in the upcoming drive!
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+    
+
+            
+
+    <!-- Footer / Connect -->
+    
+    <!-- Footer / Connect -->
+    <footer id="contact" class="bg-zinc-100 dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 py-16 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-xl font-bold mb-3">Want to collaborate or support?</h2>
+            <p class="text-zinc-600 dark:text-zinc-400 text-sm mb-6 max-w-md mx-auto">We're always open to connecting with people who share our vision for grassroots growth.</p>
+            
+            <!-- Functional Get in Touch Button (Opens Email Client) -->
+            <a href="mailto:contact@tasfoundation.org" class="inline-block bg-zinc-900 text-white dark:bg-white dark:text-zinc-950 font-bold px-6 py-3 rounded-lg text-sm hover:opacity-90 transition shadow-sm">
+                Get in Touch
+            </a>
+
+            <!-- Social Media Links Section -->
+            <div class="mt-10 pt-8 border-t border-zinc-200 dark:border-zinc-800 max-w-md mx-auto">
+                <p class="text-xs uppercase tracking-widest text-zinc-500 font-mono mb-4">Connect on Social Media</p>
+                <div class="flex justify-center gap-4 flex-wrap">
+                    <!-- Replace '#' with your actual social links -->
+                    <a href="#" target="_blank" class="px-4 py-2 rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs font-medium hover:border-amber-500 transition">
+                        Twitter / X
+                    </a>
+                    <a href="#" target="_blank" class="px-4 py-2 rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs font-medium hover:border-amber-500 transition">
+                        LinkedIn
+                    </a>
+                    <a href="#" target="_blank" class="px-4 py-2 rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs font-medium hover:border-amber-500 transition">
+                        Instagram
+                    </a>
+                    <a href="#" target="_blank" class="px-4 py-2 rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs font-medium hover:border-amber-500 transition">
+                        Facebook
+                    </a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-12 text-xs text-zinc-500 font-mono">
+                &copy; 2026 The Agbewornu Support Foundation. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts: Slideshow & Light/Dark Mode Switcher -->
+    <script>
+        // 1. Slideshow Logic
+        const slides = document.querySelectorAll('#slideshow > div');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('opacity-100');
+            slides[currentSlide].classList.add('opacity-0');
+            
+            currentSlide = (currentSlide + 1) % slides.length;
+            
+            slides[currentSlide].classList.remove('opacity-0');
+            slides[currentSlide].classList.add('opacity-100');
+        }
+        setInterval(nextSlide, 5000);
+
+        // 2. Light / Dark Mode Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+
+</body>
+</html>
